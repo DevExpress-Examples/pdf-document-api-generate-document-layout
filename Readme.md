@@ -5,14 +5,14 @@
 <!-- default badges end -->
 <!-- default file list -->
 
+# PDF Document API - Generate a Document Layout from Scratch
+
+This example shows the PDF Document Creation API that is used to programmatically generate a document layout.<br><br>The Universal Subscription or an additional Office File API Subscription is required to use this example in production code. Please refer to the <a href="https://www.devexpress.com/Subscriptions/">DevExpress Subscription</a> page for pricing information. <br><br>
+
 # Files to look at:
 
 * [Program.cs](./CS/DocumentCreationAPI/Program.cs) (VB: [Program.vb](./VB/DocumentCreationAPI/Program.vb))
 <!-- default file list end -->
-# PDF Document API - Generate a Document Layout from Scratch
-
-
-This example shows the PDF Document Creation API that is used to programmatically generate a document layout.<br><br>The Universal Subscription or an additional Office File API Subscription is required to use this example in production code. Please refer to the <a href="https://www.devexpress.com/Subscriptions/">DevExpress Subscription</a> page for pricing information. <br><br>
 
 # Documentation
 
