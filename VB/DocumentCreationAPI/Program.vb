@@ -1,3 +1,4 @@
+Imports DevExpress.Drawing
 Imports DevExpress.Pdf
 Imports System.Drawing
 
@@ -20,18 +21,15 @@ Namespace DocumentCreationAPI
 
         Private Shared Sub DrawGraphics(ByVal graph As PdfGraphics)
             ' Draw text lines on the page. 
-            Dim black As SolidBrush = CType(Brushes.Black, SolidBrush)
-            Using font1 As Font = New Font("Times New Roman", 32, FontStyle.Bold)
-                graph.DrawString("PDF Document Processor", font1, black, 180, 150)
-            End Using
+            Dim black As DXSolidBrush = CType(DXBrushes.Black, DXSolidBrush)
+            Dim font1 As DXFont = New DXFont("Times New Roman", 32, DXFontStyle.Bold)
+            graph.DrawString("PDF Document Processor", font1, black, 180, 150)
 
-            Using font2 As Font = New Font("Arial", 20)
-                graph.DrawString("Display, Print and Export PDF Documents", font2, black, 168, 230)
-            End Using
+            Dim font2 As DXFont = New DXFont("Arial", 20)
+            graph.DrawString("Display, Print and Export PDF Documents", font2, black, 168, 230)
 
-            Using font3 As Font = New Font("Arial", 10)
-                graph.DrawString("The PDF Document Processor is a non-visual component " & "that provides the application programming interface of the PDF Viewer.", font3, black, 16, 300)
-            End Using
+            Dim font3 As DXFont = New DXFont("Arial", 10)
+            graph.DrawString("The PDF Document Processor is a non-visual component " & "that provides the application programming interface of the PDF Viewer.", font3, black, 16, 300)
         End Sub
     End Class
 End Namespace
