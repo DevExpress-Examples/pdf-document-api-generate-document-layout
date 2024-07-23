@@ -38,7 +38,7 @@ namespace DocumentCreationAPI
             DXFont font2 = new DXFont("Arial", 20);
             graph.DrawString("Display, Print and Export PDF Documents", font2, black, 168, 230);
 
-            DXFont font3 = new Font("Arial", 10);
+            DXFont font3 = new DXFont("Arial", 10);
             graph.DrawString("The PDF Document Processor is a non-visual component " +
                               "that provides the application programming interface of the PDF Viewer.", font3, black, 16, 300);
         }
