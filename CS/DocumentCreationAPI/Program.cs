@@ -22,12 +22,12 @@ namespace DocumentCreationAPI
                     processor.RenderNewPage(PdfPaperSize.Letter, graph);
                 }
             }
-            // Generate a watermark
+            // Generate a watermark.
             AddWatermark("Not for sale",docPath,docPath);
             Process.Start(docPath);
         }
 
-        // Draw graphics inside a PDF document
+        // Draw graphics inside a PDF document.
         static void DrawGraphics(PdfGraphics graph) {
             // Draw text lines on the page. 
             DXSolidBrush black = (DXSolidBrush)DXBrushes.Black;
@@ -42,7 +42,7 @@ namespace DocumentCreationAPI
                               "that provides the application programming interface of the PDF Viewer.", font3, black, 16, 300);
         }
 
-        // Add a watermark with custom text
+        // Add a watermark with custom text.
         static void AddWatermark(string text,string fileName,string resultFileName) {
             using (PdfDocumentProcessor documentProcessor = new PdfDocumentProcessor()) {
                 string fontName = "Arial Black";
