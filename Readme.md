@@ -8,18 +8,29 @@
 
 # PDF Document API - Generate a Document Layout from Scratch
 
-This example shows the PDF Document Creation API that is used to programmatically generate a document layout.<br><br>The Universal Subscription or an additional Office File API Subscription is required to use this example in production code. Please refer to the <a href="https://www.devexpress.com/Subscriptions/">DevExpress Subscription</a> page for pricing information. <br><br>
+This example shows the PDF Document Creation API that is used to programmatically generate a document layout.
 
-# Files to look at:
+- The `DrawGraphics` method draws content inside an empty PDF document.
+- The `AddWatermark` method generates a watermark with custom text and adds it to the created PDF document.
+
+When you launch the app, the file is saved to your Documents folder (`Environment.SpecialFolder.MyDocuments`). 
+
+The [Result.pdf](Result.pdf) file is an example of a generated PDF document:
+
+![](pdf-processor-result.png)
+
+The Universal Subscription or an additional Office File API Subscription is required to use this example in production code. Please refer to the [DevExpress Subscription](https://www.devexpress.com/Subscriptions/) page for pricing information.
+
+# Files to Review
 
 * [Program.cs](./CS/DocumentCreationAPI/Program.cs) (VB: [Program.vb](./VB/DocumentCreationAPI/Program.vb))
+* [Result.pdf](Result.pdf)
 <!-- default file list end -->
 
 # Documentation
 
 - [How to: Generate a PDF Document Layout from Scratch](https://docs.devexpress.com/OfficeFileAPI/114824/pdf-document-api/examples/pdf-graphics-and-additional-content/how-to-generate-a-document-layout-from-scratch)
 - [Document Generation](https://docs.devexpress.com/OfficeFileAPI/118794/pdf-document-api/document-generation)
-
 
 <!-- feedback -->
 ## Does this example address your development requirements/objectives?
