@@ -3,6 +3,7 @@ using DevExpress.Pdf;
 using System;
 using System.Diagnostics;
 using System.Drawing;
+using System.IO;
 
 namespace DocumentCreationAPI
 {
@@ -10,7 +11,7 @@ namespace DocumentCreationAPI
 
         static void Main(string[] args) {
 
-            string docPath = "..\\..\\Result.pdf";
+            string docPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments),"Result.pdf");
 
             using (PdfDocumentProcessor processor = new PdfDocumentProcessor()) {
                 // Create an empty document.
