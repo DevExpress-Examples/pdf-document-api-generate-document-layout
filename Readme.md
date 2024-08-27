@@ -12,7 +12,7 @@ This example shows the PDF Document Creation API that is used to programmatica
 - The `DrawGraphics` method draws content inside an empty PDF document.
 - The `AddWatermark` method generates a watermark with custom text and adds it to the created PDF document.
 
-When you launch the app, the file is saved to your Documents folder (`Environment.SpecialFolder.MyDocuments`). 
+When you launch the app, the file is saved to your Documents folder (`%userprofile%/Documents`). 
 
 The [Result.pdf](Result.pdf) file is an example of a generated PDF document:
 
