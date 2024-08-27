@@ -57,10 +57,10 @@ Namespace DocumentCreationAPI
                             Dim watermarkSize = page.CropBox.Width * 0.75
                             Using graphics As PdfGraphics = documentProcessor.CreateGraphics()
                                 Dim stringSize As SizeF = graphics.MeasureString(Text, font)
-                                Dim scale As Single = watermarkSize / stringSize.Width
-                                graphics.TranslateTransform(page.CropBox.Width * 0.5, page.CropBox.Height * 0.5)
+                                Dim scale As Single = CSng(watermarkSize) / stringSize.Width
+                                graphics.TranslateTransform(CSng(page.CropBox.Width * 0.5), CSng(page.CropBox.Height * 0.5))
                                 graphics.RotateTransform(-45.0)
-                                graphics.TranslateTransform(-stringSize.Width * scale * 0.5, -stringSize.Height * scale * 0.5)
+                                graphics.TranslateTransform(CSng(-stringSize.Width * scale * 0.5), CSng(-stringSize.Height * scale * 0.5))
                                 Using actualFont As Font = New Font(fontName, fontSize * scale)
                                     Dim rect As RectangleF = New RectangleF(0, 0, stringSize.Width * scale, stringSize.Height * scale)
                                     graphics.DrawString(Text, actualFont, brush, rect, stringFormat)
