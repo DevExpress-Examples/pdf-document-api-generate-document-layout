@@ -52,28 +52,26 @@ namespace DocumentCreationAPI
                 stringFormat.Alignment = PdfStringAlignment.Center;
                 stringFormat.LineAlignment = PdfStringAlignment.Center;
                 documentProcessor.LoadDocument(fileName);
-                using (SolidBrush brush = new SolidBrush(Color.FromArgb(63,Color.Black))) {
-                    using (Font font = new Font(fontName,fontSize)) {
-                        foreach (var page in documentProcessor.Document.Pages) {
-                            var watermarkSize = page.CropBox.Width * 0.75;
-                            using (PdfGraphics graphics = documentProcessor.CreateGraphics()) {
-                                SizeF stringSize = graphics.MeasureString(text,font);
-                                float scale = (float)(watermarkSize / (double)stringSize.Width);
-                                graphics.TranslateTransform((float)(page.CropBox.Width * 0.5),(float)(page.CropBox.Height * 0.5));
-                                graphics.RotateTransform((float)-45.0);
-                                graphics.TranslateTransform((float)(-stringSize.Width * scale * 0.5),(float)(-stringSize.Height * scale * 0.5));
-                                using (Font actualFont = new Font(fontName,fontSize * scale)) {
-                                    RectangleF rect = new RectangleF(0,0,stringSize.Width * scale,stringSize.Height * scale);
-                                    graphics.DrawString(text,actualFont,brush,rect,stringFormat);
-                                }
-                                graphics.AddToPageForeground(page,72,72);
-                            }
+                using (DXSolidBrush brush = new DXSolidBrush(Color.FromArgb(63,Color.Black))) {
+                    DXFont font = new DXFont(fontName,fontSize);
+                    foreach (var page in documentProcessor.Document.Pages) {
+                        var watermarkSize = page.CropBox.Width * 0.75;
+                        using (PdfGraphics graphics = documentProcessor.CreateGraphics()) {
+                            SizeF stringSize = graphics.MeasureString(text,font);
+                            float scale = (float)(watermarkSize / (double)stringSize.Width);
+                            graphics.TranslateTransform((float)(page.CropBox.Width * 0.5),(float)(page.CropBox.Height * 0.5));
+                            graphics.RotateTransform((float)-45.0);
+                            graphics.TranslateTransform((float)(-stringSize.Width * scale * 0.5),(float)(-stringSize.Height * scale * 0.5));
+                            DXFont actualFont = new DXFont(fontName,fontSize * scale);
+                            RectangleF rect = new RectangleF(0,0,stringSize.Width * scale,stringSize.Height * scale);
+                            graphics.DrawString(text,actualFont,brush,rect,stringFormat);
+                                
+                            graphics.AddToPageForeground(page,72,72);
                         }
-                    }
+                    }                    
                 }
                 documentProcessor.SaveDocument(resultFileName);
             }
         }
-
     }
 }
