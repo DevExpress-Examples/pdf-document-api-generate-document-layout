@@ -10,8 +10,8 @@
 
 This example shows the PDF Document Creation API that is used to programmatically generate a document layout.
 
-- The `DrawGraphics` method draws content inside an empty PDF document.
-- The `AddWatermark` method generates a watermark with custom text and adds it to the created PDF document.
+- The custom `DrawGraphics` method draws content inside an empty PDF document.
+- The custom `AddWatermark` method generates a watermark with custom text and adds it to the created PDF document.
 
 When you launch the app, the file is saved to your Documents folder (`%userprofile%/Documents`). 
 
