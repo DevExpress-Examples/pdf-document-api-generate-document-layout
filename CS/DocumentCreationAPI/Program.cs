@@ -5,10 +5,8 @@ using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 
-namespace DocumentCreationAPI
-{
+namespace DocumentCreationAPI {
     class Program {
-
         static void Main(string[] args) {
 
             string docPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments),"Result.pdf");
