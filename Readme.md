@@ -6,7 +6,7 @@
 <!-- default badges end -->
 <!-- default file list -->
 
-# PDF Document API - Generate a Document Layout from Scratch
+# PDF Document API - Generate a Document Layout and a Watermark from Scratch
 
 This example shows the PDF Document Creation API that is used to programmatically generate a document layout.
 
