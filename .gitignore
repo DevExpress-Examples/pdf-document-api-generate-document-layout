@@ -296,3 +296,4 @@ __pycache__/
 *.odx.cs
 *.xsd.cs
 /CS/DocumentCreationAPI/DocumentCreationAPI.csproj.bak
+/VB/DocumentCreationAPI/DocumentCreationAPI.vbproj.bak

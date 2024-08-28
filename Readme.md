@@ -18,7 +18,7 @@ The [Result.pdf](Result.pdf) file is an example of a generated PDF document:
 
 ![](pdf-processor-result.png)
 
-The Universal Subscription or an additional Office File API Subscription is required to use this example in production code. Please refer to the [DevExpress Subscription](https://www.devexpress.com/Subscriptions/) page for pricing information.
+The Universal Subscription or Office File API Subscription is required to use this example in production code. Please refer to the [DevExpress Subscriptions](https://www.devexpress.com/Subscriptions/) page for pricing information.
 
 # Files to Review
 
