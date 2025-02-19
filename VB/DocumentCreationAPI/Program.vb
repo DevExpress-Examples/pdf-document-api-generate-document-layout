@@ -25,7 +25,7 @@ Namespace DocumentCreationAPI
             End Using
             ' Generate a watermark.
             AddWatermark("Not for sale", docPath, docPath)
-            Process.Start(docPath)
+            Process.Start(New ProcessStartInfo(docPath) With {.UseShellExecute = True})
         End Sub
 
         ' Draw graphics inside a PDF document.

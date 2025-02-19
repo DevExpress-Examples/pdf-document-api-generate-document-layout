@@ -4,7 +4,7 @@
 [![](https://img.shields.io/badge/📖_How_to_use_DevExpress_Examples-e9f6fc?style=flat-square)](https://docs.devexpress.com/GeneralInformation/403183)
 [![](https://img.shields.io/badge/💬_Leave_Feedback-feecdd?style=flat-square)](#does-this-example-address-your-development-requirementsobjectives)
 <!-- default badges end -->
-<!-- default file list -->
+
 
 # PDF Document API - Generate a Document Layout and a Watermark from Scratch
 
@@ -13,7 +13,7 @@ This example shows the PDF Document Creation API that is used to programmatica
 - The custom `DrawGraphics` method draws content inside an empty PDF document.
 - The custom `AddWatermark` method generates a watermark with custom text and adds it to the created PDF document.
 
-When you launch the app, the file is saved to your Documents folder (`%userprofile%/Documents`). 
+When you launch the app, the file is saved to your Documents folder (`%userprofile%/Documents`).
 
 The [Result.pdf](Result.pdf) file is an example of a generated PDF document:
 
@@ -25,7 +25,7 @@ The Universal Subscription or Office File API Subscription is required to use th
 
 * [Program.cs](./CS/DocumentCreationAPI/Program.cs) (VB: [Program.vb](./VB/DocumentCreationAPI/Program.vb))
 * [Result.pdf](Result.pdf)
-<!-- default file list end -->
+
 
 # Documentation
 

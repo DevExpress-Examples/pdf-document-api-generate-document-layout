@@ -23,7 +23,7 @@ namespace DocumentCreationAPI {
             }
             // Generate a watermark.
             AddWatermark("Not for sale",docPath,docPath);
-            Process.Start(docPath);
+            Process.Start(new ProcessStartInfo(docPath) { UseShellExecute = true });
         }
 
         // Draw graphics inside a PDF document.
