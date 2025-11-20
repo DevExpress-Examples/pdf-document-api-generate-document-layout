@@ -28,7 +28,7 @@ namespace DocumentCreationAPI {
 
         // Draw graphics inside a PDF document.
         static void DrawGraphics(PdfGraphics graph) {
-            // Draw text lines on the page. 
+            // Draw text lines on the page.
             DXSolidBrush black = (DXSolidBrush)DXBrushes.Black;
             DXFont font1 = new DXFont("Times New Roman", 32, DXFontStyle.Bold);
             graph.DrawString("PDF Document Processor", font1, black, 180, 150);
@@ -54,19 +54,19 @@ namespace DocumentCreationAPI {
                     DXFont font = new DXFont(fontName,fontSize);
                     foreach (var page in documentProcessor.Document.Pages) {
                         var watermarkSize = page.CropBox.Width * 0.75;
-                        using (PdfGraphics graphics = documentProcessor.CreateGraphics()) {
+                        using (PdfGraphics graphics = documentProcessor.CreateGraphicsPageSystem()) {
                             SizeF stringSize = graphics.MeasureString(text,font);
                             float scale = (float)(watermarkSize / (double)stringSize.Width);
                             graphics.TranslateTransform((float)(page.CropBox.Width * 0.5),(float)(page.CropBox.Height * 0.5));
-                            graphics.RotateTransform((float)-45.0);
+                            graphics.RotateTransform((float)45.0);
                             graphics.TranslateTransform((float)(-stringSize.Width * scale * 0.5),(float)(-stringSize.Height * scale * 0.5));
                             DXFont actualFont = new DXFont(fontName,fontSize * scale);
                             RectangleF rect = new RectangleF(0,0,stringSize.Width * scale,stringSize.Height * scale);
                             graphics.DrawString(text,actualFont,brush,rect,stringFormat);
-                                
-                            graphics.AddToPageForeground(page,72,72);
+
+                            graphics.AddToPageForeground(page);
                         }
-                    }                    
+                    }
                 }
                 documentProcessor.SaveDocument(resultFileName);
             }

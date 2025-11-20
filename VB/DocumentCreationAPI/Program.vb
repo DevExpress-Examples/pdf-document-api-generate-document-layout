@@ -30,7 +30,7 @@ Namespace DocumentCreationAPI
 
         ' Draw graphics inside a PDF document.
         Private Shared Sub DrawGraphics(ByVal graph As PdfGraphics)
-            ' Draw text lines on the page. 
+            ' Draw text lines on the page.
             Dim black As DXSolidBrush = CType(DXBrushes.Black, DXSolidBrush)
             Dim font1 As DXFont = New DXFont("Times New Roman", 32, DXFontStyle.Bold)
             graph.DrawString("PDF Document Processor", font1, black, 180, 150)
@@ -55,17 +55,17 @@ Namespace DocumentCreationAPI
                     Using font As New Font(fontName, fontSize)
                         For Each page In documentProcessor.Document.Pages
                             Dim watermarkSize = page.CropBox.Width * 0.75
-                            Using graphics As PdfGraphics = documentProcessor.CreateGraphics()
+                            Using graphics As PdfGraphics = documentProcessor.CreateGraphicsPageSystem()
                                 Dim stringSize As SizeF = graphics.MeasureString(Text, font)
                                 Dim scale As Single = CSng(watermarkSize) / stringSize.Width
                                 graphics.TranslateTransform(CSng(page.CropBox.Width * 0.5), CSng(page.CropBox.Height * 0.5))
-                                graphics.RotateTransform(-45.0)
+                                graphics.RotateTransform(45.0)
                                 graphics.TranslateTransform(CSng(-stringSize.Width * scale * 0.5), CSng(-stringSize.Height * scale * 0.5))
                                 Using actualFont As Font = New Font(fontName, fontSize * scale)
                                     Dim rect As RectangleF = New RectangleF(0, 0, stringSize.Width * scale, stringSize.Height * scale)
                                     graphics.DrawString(Text, actualFont, brush, rect, stringFormat)
                                 End Using
-                                graphics.AddToPageForeground(page, 72, 72)
+                                graphics.AddToPageForeground(page)
                             End Using
                         Next
                     End Using

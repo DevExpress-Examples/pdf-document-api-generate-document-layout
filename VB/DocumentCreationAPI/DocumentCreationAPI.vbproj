@@ -33,8 +33,8 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-	  <PackageReference Include="DevExpress.Document.Processor" Version="24.2.3" />
-	  <PackageReference Include="DevExpress.Drawing.Skia" Version="24.2.3" />
+	  <PackageReference Include="DevExpress.Document.Processor" Version="25.2.2-beta" />
+	  <PackageReference Include="DevExpress.Drawing.Skia" Version="25.2.2-beta" />
   </ItemGroup>
 
 </Project>
