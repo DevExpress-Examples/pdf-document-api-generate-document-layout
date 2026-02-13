@@ -33,7 +33,7 @@ The Universal Subscription or Office File API Subscription is required to use th
 - [Document Generation](https://docs.devexpress.com/OfficeFileAPI/118794/pdf-document-api/document-generation)
 
 <!-- feedback -->
-## Does this example address your development requirements/objectives?
+## Does This Example Address Your Development Requirements/Objectives?
 
 [<img src="https://www.devexpress.com/support/examples/i/yes-button.svg"/>](https://www.devexpress.com/support/examples/survey.xml?utm_source=github&utm_campaign=pdf-document-api-generate-document-layout&~~~was_helpful=yes) [<img src="https://www.devexpress.com/support/examples/i/no-button.svg"/>](https://www.devexpress.com/support/examples/survey.xml?utm_source=github&utm_campaign=pdf-document-api-generate-document-layout&~~~was_helpful=no)
 
